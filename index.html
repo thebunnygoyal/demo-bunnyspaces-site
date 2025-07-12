@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BunnySpaces Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+
+        .logo {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .feature-card {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .feature-description {
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 3rem 0;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            margin-top: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: linear-gradient(45deg, #ff6b6b, #ee5a24);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 1rem;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin: 3rem 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+            margin: 1rem;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #ffd700;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 3rem;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .tech-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            margin: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .logo {
+                font-size: 2rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">🐰 BunnySpaces</div>
+            <div class="tagline">Your Creative Digital Playground</div>
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-number">100K+</div>
+                    <div class="stat-label">Happy Users</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Projects Created</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">99.9%</div>
+                    <div class="stat-label">Uptime</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <div class="feature-card">
+                <div class="feature-icon">🚀</div>
+                <div class="feature-title">Lightning Fast</div>
+                <div class="feature-description">
+                    Built with modern technologies for blazing fast performance. 
+                    Your ideas come to life instantly.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🎨</div>
+                <div class="feature-title">Beautiful Design</div>
+                <div class="feature-description">
+                    Stunning, responsive designs that work perfectly across all devices. 
+                    Make your projects shine.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">Secure & Reliable</div>
+                <div class="feature-description">
+                    Enterprise-grade security with automated backups. 
+                    Your data is safe with us.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">📱</div>
+                <div class="feature-title">Mobile First</div>
+                <div class="feature-description">
+                    Optimized for mobile devices with progressive web app capabilities. 
+                    Access anywhere, anytime.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">Real-time Sync</div>
+                <div class="feature-description">
+                    Collaborate in real-time with your team. 
+                    Changes sync instantly across all devices.
+                </div>
+            </div>
+
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <div class="feature-title">Global CDN</div>
+                <div class="feature-description">
+                    Powered by a global content delivery network. 
+                    Fast loading times worldwide.
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2 style="margin-bottom: 1rem;">Ready to Get Started?</h2>
+            <p style="margin-bottom: 2rem; opacity: 0.9;">Join thousands of creators building amazing projects with BunnySpaces</p>
+            <a href="#" class="cta-button">Start Building Today</a>
+            <a href="#" class="cta-button">View Documentation</a>
+        </div>
+
+        <div style="text-align: center; margin: 3rem 0;">
+            <h3 style="margin-bottom: 1rem;">Powered By</h3>
+            <div class="tech-badge">Netlify</div>
+            <div class="tech-badge">Namecheap DNS</div>
+            <div class="tech-badge">Let's Encrypt SSL</div>
+            <div class="tech-badge">CDN</div>
+            <div class="tech-badge">Auto-Deploy</div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 BunnySpaces Demo. Deployed via GitHub + Netlify Integration.</p>
+            <p style="margin-top: 1rem; opacity: 0.7;">
+                Custom Domain: <strong>demo.bunnyspaces.club</strong> | 
+                Infrastructure: Automated via MCP Tools
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // Add some interactive effects
+        document.addEventListener('DOMContentLoaded', function() {
+            // Animate stats on scroll
+            const stats = document.querySelectorAll('.stat-number');
+            
+            const animateStats = () => {
+                stats.forEach(stat => {
+                    const finalValue = stat.textContent;
+                    const numValue = parseInt(finalValue.replace(/[^\d]/g, ''));
+                    let current = 0;
+                    const increment = numValue / 50;
+                    
+                    const timer = setInterval(() => {
+                        current += increment;
+                        if (current >= numValue) {
+                            stat.textContent = finalValue;
+                            clearInterval(timer);
+                        } else {
+                            stat.textContent = Math.floor(current) + (finalValue.includes('K') ? 'K+' : finalValue.includes('%') ? '%' : '+');
+                        }
+                    }, 50);
+                });
+            };
+
+            // Trigger animation after page load
+            setTimeout(animateStats, 1000);
+
+            // Add hover effects to cards
+            const cards = document.querySelectorAll('.feature-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.background = 'rgba(255,255,255,0.15)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.background = 'rgba(255,255,255,0.1)';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
